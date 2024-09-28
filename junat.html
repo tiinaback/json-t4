@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        #train-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #train-content th, #train-content td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        #train-content th {
+            background-color: #333;
+            color: white;
+        }
+        #train-content td {
+            font-size: 16px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="liikennekamera.html">Liikennekamerat</a></li>
+            <li><a href="junat.html">Junat</a></li>
+        </ul>
+    </nav>
+
+    <h1>Mennäänkö junalla Tampereelle?</h1>
+    <p>Kuinkahan usein junia menee?</p>
+
+    <div id="train-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Juna</th>
+                    <th>Reitti</th>
+                    <th>Lähtöaika</th>
+                    <th>Tyyppi</th>
+                </tr>
+            </thead>
+            <tbody id="train-body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="aikataulut.js"></script>
+</body>
+</html>
